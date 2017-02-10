@@ -2,7 +2,7 @@ public class Materialartikel
 {	
 	public static void main(String args[])
 	{
-		materialartikel = Materialartikel.new("artname", "artnr", "einheit", "packgr", "mind", "bestmenge", "bestand");
+		Materialartikel ma = new Materialartikel("artname", 1, "einheit", 2, 3, 4, 5);
 	}
 	
 	private String artname;
@@ -27,7 +27,7 @@ public class Materialartikel
 	public void setArtname(String artname){this.artname = artname;}
 	public void setArtnr(Integer artnr){this.artnr = artnr;}
 	public void setEinheit(String einheit){this.einheit = einheit;}
-	public void setPackgr(Integer packgr){this.Packgr = packgr;}
+	public void setPackgr(Integer packgr){this.packgr = packgr;}
 	public void setMind(Integer mind){this.mind = mind;}
 	public void setBestmenge(Integer bestmenge){this.bestmenge = bestmenge;}
 	public void setBestand(Integer bestand){this.bestand = bestand;}
