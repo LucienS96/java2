@@ -1,31 +1,42 @@
 public class Materialartikel
-{
+{	
 	public static void main(String args[])
 	{
-		String Artname[] = args[0];
-		int Artnr = Ineger.parseInt(args[1]);
-		String Einheit[] = args[2];
-		int Packgr = Ineger.parseInt(args[3]);
-		int Min = Ineger.parseInt(args[4]);
-		int Bestmenge = Ineger.parseInt(args[5]);
-		int Bestand = Ineger.parseInt(args[6]);
-		
-		System.out.println("", +Artname+ " " +Artnr+ " " +Einheit+ " " +Packgr+ " " +Min+ " " +Bestmenge+ " " +Bestand);
+		Materialartikel = Materialartikel.new("Artname", "Artnr", "Einheit", "Packgr", "Mind", "Bestmenge", "Bestand");
 	}
 	
-	void setArtname(String Artname){this.Artname;}
-	void setArtnr(Integer Artnr){this.Artnr;}
-	void setEinheit(String Einheit){this.Einheit;}
-	void setPackgr(Integer Packgr){this.Packgr;}
-	void setMin(Integer Min){this.Min;}
-	void setBestmenge(Integer Bestmenge){this.Bestmenge;}
-	void setBestand(Integer Bestand){this.Bestand;}
+	private String Artname;
+	private int Artnr;
+	private String Einheit;
+	private int Packgr;
+	private int Mind;
+	private int Bestmenge;
+	private int Bestand;
 	
-	String getArtname(){return Artname;}
-	Integer getArtnr() {return Artnr;}
-	String getEinheit() {return Einheit;}
-	Integer getPackgr()	{return Packgr;}
-	Integer getMin() {return Min;}
-	Integer getBestmenge() {return Bestmenge;}
-	Integer getBestand() {return Bestand;}
+	public Materialartikel(String Artname, int Artnr, String Einheit, int Packgr, int Mind, int Bestmenge, int Bestand)
+	{
+		this.Artname = Artname;
+		this.Artnr = Artnr;
+		this.Einheit = Einheit;
+		this.Packgr = Packgr;
+		this.Mind = Mind;
+		this.Bestmenge = Bestmenge;
+		this.Bestand = Bestand;
+	}
+	
+	public void setArtname(String Artname){this.Artname = Artname;}
+	public void setArtnr(Integer Artnr){this.Artnr = Artnr;}
+	public void setEinheit(String Einheit){this.Einheit = Einheit;}
+	public void setPackgr(Integer Packgr){this.Packgr = Packgr;}
+	public void setMind(Integer Mind){this.Mind = Mind;}
+	public void setBestmenge(Integer Bestmenge){this.Bestmenge = Bestmenge;}
+	public void setBestand(Integer Bestand){this.Bestand = Bestand;}
+	
+	public String getArtname(){return this.Artname;}
+	public Integer getArtnr() {return this.Artnr;}
+	public String getEinheit() {return this.Einheit;}
+	public Integer getPackgr()	{return this.Packgr;}
+	public Integer getMind() {return this.Mind;}
+	public Integer getBestmenge() {return this.Bestmenge;}
+	public Integer getBestand() {return this.Bestand;}
 }
