@@ -1,14 +1,14 @@
 public class Tag
 {
-	public static void main(String args[2])
+	public static void main(String args[])
 	{
-		int tage = Integer.parseInt(String args[0]);
-		int monat = Integer.parseInt(String args[1]);
-		int jahr = Integer.parseInt(String args[2]);
+		int tage = Integer.parseInt(args[0]);
+		int monat = Integer.parseInt(args[1]);
+		int jahr = Integer.parseInt(args[2]);
 		int tagemonat;
 		int erg;
 		
-		if ((jahr mod 4) == 0 && (jahr mod 400) == 0 && (jahr mod 100) != 0)
+		if ((jahr % 4) == 0 && (jahr % 400) == 0 && (jahr % 100) != 0)
 		{
 			switch (monat){
 			case 1: tagemonat = 0; break;
@@ -42,7 +42,7 @@ public class Tag
 			case 12: tagemonat = 334; break;
 			}
 		}
-		erg = ((jahr-1900)*365+(jahr-1900)/4+tagemonat+tage) mod 7;
+		erg = ((jahr-1900)*365+(jahr-1900)/4+tagemonat+tage) % 7;
 		
 		switch (erg){
 			case 0: System.out.println("Montag"); break;
