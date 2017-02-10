@@ -1,8 +1,19 @@
 public class Materialartikel
 {	
+	public void entnehme(int delta)
+	{
+		bestand = bestand - delta;
+	}
+
 	public static void main(String args[])
 	{
-		Materialartikel ma = new Materialartikel("artname", 1, "einheit", 2, 3, 4, 5);
+		Materialartikel ma = new Materialartikel(args[0], Integer.parseInt(args[1]), args[2], Integer.parseInt(args[3]), Integer.parseInt(args[4]), Integer.parseInt(args[5]), Integer.parseInt(args[6]));
+		System.out.println(ma.toString());
+	}
+	
+	public String toString()
+	{
+		return String.format("%s, %d, %s, %d, %d, %d, %d", artname, artnr, einheit, packgr, mind, bestmenge, bestand);
 	}
 	
 	private String artname;
