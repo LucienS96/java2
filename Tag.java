@@ -5,7 +5,7 @@ public class Tag
 		int tage = Integer.parseInt(args[0]);
 		int monat = Integer.parseInt(args[1]);
 		int jahr = Integer.parseInt(args[2]);
-		int tagemonat;
+		int tagemonat = 0;
 		int erg;
 		
 		if ((jahr % 4) == 0 && (jahr % 400) == 0 && (jahr % 100) != 0)
@@ -45,13 +45,13 @@ public class Tag
 		erg = ((jahr-1900)*365+(jahr-1900)/4+tagemonat+tage) % 7;
 		
 		switch (erg){
-			case 0: System.out.println("Montag"); break;
-			case 1: System.out.println("Dienstag"); break;
-			case 2: System.out.println("Mittwoch"); break;
-			case 3: System.out.println("Donnerstag"); break;
-			case 4: System.out.println("Freitag"); break;
-			case 5: System.out.println("Samstag"); break;
-			case 6: System.out.println("Sonntag"); break;
+			case 1: System.out.println("Montag"); break;
+			case 2: System.out.println("Dienstag"); break;
+			case 3: System.out.println("Mittwoch"); break;
+			case 4: System.out.println("Donnerstag"); break;
+			case 5: System.out.println("Freitag"); break;
+			case 6: System.out.println("Samstag"); break;
+			case 0: System.out.println("Sonntag"); break;
 		}
 		
 	}
